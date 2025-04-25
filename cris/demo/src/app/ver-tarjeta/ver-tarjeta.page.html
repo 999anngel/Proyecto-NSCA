@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="cards-container" *ngIf="tarjetaDetalles">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="margin-left">{{ nombreBanco }}</h1>
+        <div class="chip"></div>
+      </div>
+      <div class="card-number">
+        <h1 class="card-number-large">{{ tarjetaDetalles.numeroTarjeta }}</h1>
+      </div>
+      <div class="card-footer">
+        <h4 class="margin-left">{{ tarjetaDetalles.nombreTitular }}</h4>
+        <h4 class="expiry-date">{{ tarjetaDetalles.fechaVencimiento }}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-container" *ngIf="tarjetaDetalles">
+    <div class="card-back">
+      <div>
+        <br>
+        <div class="linea"></div> <!-- Esta línea debe ocupar todo el ancho -->
+        <br><br><br>
+      </div>
+      <div class="card-number">
+        <!-- Número de tarjeta aquí si es necesario -->
+      </div>
+      <div class="card-footer">
+        <br>
+        <h4 class="margin-cvv">cvv: {{ tarjetaDetalles.cvv }}</h4>
+      </div>
+    </div>
+  </div>
+  
+  <button class="custom-button" (click)="confirmarEliminacion()">
+    Eliminar tarjeta
+  </button> 
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-back-button defaultHref="/" class="icons-color" name="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

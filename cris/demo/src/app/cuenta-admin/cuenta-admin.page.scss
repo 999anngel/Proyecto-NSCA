@@ -1,0 +1,56 @@
+ion-menu-button {
+    color: #bd0000;
+  }
+  
+  .icons-color {
+    color: #bd0000;
+  }
+    #container {
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    #container strong {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    
+    #container p {
+      font-size: 16px;
+      line-height: 22px;
+      color: #8c8c8c;
+      margin: 0;
+    }
+    
+    #container a {
+      text-decoration: none;
+    }
+  
+    ion-card-content{
+      text-align: left;
+      color:#000000;
+    }
+    
+    footer {
+      --background: #fff; /* Color de fondo del footer, ajusta según sea necesario */
+    }
+    
+    ion-toolbar {
+      display: flex;
+      justify-content: center; /* Centra los botones horizontalmente */
+    }
+    
+    .footer-buttons {
+      display: flex;
+      justify-content: space-between; /* Distribuye los botones de manera uniforme */
+      width: 100%; /* Asegura que los botones ocupen todo el ancho del toolbar */
+    }
+    
+    ion-button {
+      flex: 1; /* Asegura que los botones se expandan y ocupen el espacio */
+      text-align: center; /* Centra el texto e íconos dentro de los botones */
+    }

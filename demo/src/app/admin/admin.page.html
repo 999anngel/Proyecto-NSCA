@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 40%; width: 40%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding"
+>
+  <ion-card-header>
+    <ion-card-title>Administrador</ion-card-title>
+    <ion-card-title>Pagina</ion-card-title>
+  </ion-card-header>
+  <br><br><br><br><br><br><br>
+
+  <div class="admin-container">
+    <button expand="block" class="custom-button" [routerLink]="['/product-list']">
+      Administrar Productos
+      <ion-icon slot="start" name="pricetags-outline"></ion-icon>
+    </button>
+
+    <button expand="block" class="custom-button" [routerLink]="['/user-list']">
+      Administrar Usuarios
+      <ion-icon slot="start" name="people"></ion-icon>
+    </button>
+
+    <button expand="block" class="custom-button" [routerLink]="['/employee-list']">
+      Administrar Empleados
+      <ion-icon slot="start" name="people"></ion-icon>
+    </button>
+    
+    <button expand="block" class="custom-button" [routerLink]="['/metodo-list']">
+      Ver tarjetas
+      <ion-icon slot="start" name="card"></ion-icon>
+    </button>
+    
+    <button expand="block" class="custom-button" [routerLink]="['/feedback-list']">
+      Ver comentarios
+      <ion-icon slot="start" name="albums"></ion-icon>
+    </button>
+
+    <button expand="block" class="custom-button" [routerLink]="['/ayudas-list']">
+      Ver ayudas
+      <ion-icon slot="start" name="help"></ion-icon>
+    </button>
+    <button expand="block" class="custom-button" [routerLink]="['/analisis-all']">
+      Analisis
+      <ion-icon slot="start" name="stats-chart"></ion-icon>
+    </button>
+
+    <button expand="block" class="custom-button" [routerLink]="['/sales-list']">
+      Ventas
+      <ion-icon slot="start" name="receipt"></ion-icon>
+    </button>
+  </div>
+  <br><br><br><br><br><br><br>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cuenta-admin', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

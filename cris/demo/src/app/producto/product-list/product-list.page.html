@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="header-container">
+    <div class="search-container">
+      <ion-input placeholder="Buscar producto" class="search-input" color="dark"></ion-input>
+      <button [routerLink]="['/product-add']" class="custom-button-create">
+        <h1>+</h1>
+      </button>
+    </div>
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let producto of productos">
+      <ion-item slot="header">
+        <ion-label>{{ producto.nombre }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>Descripción: {{ producto.descripcion }}</p>
+        <p>Precio: {{ producto.precio | currency:'USD':'symbol':'1.0-0' }}</p>
+        <p>Categoria: {{ producto.categoria }}</p>
+        <p>Género: {{ producto.genero }}</p>
+        <p>Color: {{ producto.color }}</p>
+        <p>Stock: {{ producto.stock }}</p>
+        <p>Stock: {{ producto.ventas }}</p>
+        <p>Imágenes:</p>
+        <div class="image-container">
+          <div class="image-item">
+            <ion-img src="../assets/img/{{ producto.img1 }}" alt="{{ producto.nombre }}"
+              class="product-image"></ion-img>
+          </div>
+          <div class="image-item">
+            <ion-img src="../assets/img/{{ producto.img2 }}" alt="{{ producto.nombre }}"
+              class="product-image"></ion-img>
+          </div>
+          <div class="image-item">
+            <ion-img src="../assets/img/{{ producto.img3 }}" alt="{{ producto.nombre }}"
+              class="product-image"></ion-img>
+          </div>
+          <div class="image-item">
+            <ion-img src="../assets/img/{{ producto.img4 }}" alt="{{ producto.nombre }}"
+              class="product-image"></ion-img>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="custom-button" [routerLink]="['/product-edit', producto.id]">
+            <ion-icon name="pencil-sharp" class="icon-large"></ion-icon>
+          </button>
+          <button class="custom-button" (click)="confirmDelete(producto.id)">
+          <ion-icon name="trash" class="icon-large"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <style>
+    ion-accordion {
+      margin: 0 auto;
+    }
+
+    ion-accordion.accordion-expanding,
+    ion-accordion.accordion-expanded {
+      width: calc(100% - 32px);
+      margin: 16px auto;
+    }
+
+    ion-accordion.accordion-collapsing ion-item[slot='header'],
+    ion-accordion.accordion-collapsed ion-item[slot='header'] {
+      --background: #ffffff;
+      /* Cambia el color a rojo */
+      --color: #000000;
+    }
+
+    ion-accordion.accordion-expanding ion-item[slot='header'],
+    ion-accordion.accordion-expanded ion-item[slot='header'] {
+      --background: #bd0000;
+      /* Cambia el color a rojo */
+      --color: #ffffff;
+    }
+  </style>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-back-button defaultHref="/" class="icons-color" name="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

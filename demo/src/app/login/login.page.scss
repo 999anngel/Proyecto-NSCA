@@ -1,0 +1,135 @@
+ion-menu-button {
+  color: #bd0000;
+}
+
+.icons-color {
+  color: #bd0000;
+}
+
+.login-container {
+  width: 100%; /* Ancho completo del viewport en móviles */
+  max-width: 360px; /* Ancho máximo para pantallas grandes */
+  margin: auto;
+}
+
+ion-card {
+  border-radius: 16px; /* Bordes redondeados para una apariencia moderna */
+  padding: 20px; /* Espaciado interno más amplio */
+  background: #ffffff; /* Fondo blanco para el card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el card */
+  
+}
+
+ion-card-header {
+  background: #bd0000; /* Color de fondo azul para el encabezado */
+  border-radius: 16px 16px 0 0; /* Bordes superiores redondeados */
+  text-align: center;
+  padding: 16px;
+}
+
+ion-card-title {
+  color: white;
+}
+
+ion-card-content {
+  padding: 10px;
+}
+
+ion-item {
+  --highlight-height: 0;
+  --border-color: transparent; /* Quita el borde de los laterales y superior */
+  --border-width: 0 0 2px 0; /* Solo deja la línea inferior */
+  --border-style: solid;
+  --border-bottom-color: #bd0000; /* Color de la línea inferior */
+  margin-bottom: 20px; /* Espaciado entre los campos */
+  
+  ion-input {
+    --padding-start: 0; /* Elimina el padding en los lados */
+    --padding-end: 0;
+    border-bottom: 2px solid #bd0000; /* Añade la línea roja debajo del input */
+    border-radius: 0; /* Quita los bordes redondeados */
+    transition: border-color 0.3s ease; /* Transición suave del borde */
+  }
+
+  ion-input:focus {
+    border-bottom-color: #bd0000; /* Mantiene el color rojo al enfocar */
+  }
+}
+
+ion-label {
+  font-size: 0.95rem; /* Tamaño de fuente adecuado para etiquetas */
+  margin-bottom: 4px; /* Espacio debajo del label */
+  transition: color 0.3s ease; /* Transición suave del color */
+}
+
+
+
+.remember-me {
+  display: flex;
+  align-items: center; /* Alinea el contenido verticalmente */
+  margin-bottom: 20px; /* Espacio abajo de la opción de recordar contraseña */
+}
+
+.remember-me ion-checkbox {
+  margin-right: 10px; /* Espacio a la derecha del checkbox */
+}
+
+.remember-me ion-label {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño para el texto */
+  color: #333; /* Color del texto */
+  margin-top: 4px; /* Ajusta el margen superior para mejor alineación */
+}
+
+.links {
+  display: flex;
+  flex-direction: column; /* Apila los enlaces verticalmente */
+  font-size: 0.9rem; /* Tamaño de fuente adecuado */
+  margin-top: 20px; /* Espacio arriba de los enlaces */
+}
+
+.links a {
+  color: #000000; /* Color de los enlaces */
+  text-decoration: none;
+  margin-bottom: 10px; /* Espacio entre los enlaces */
+  transition: color 0.1s ease; /* Transición suave del color del enlace */
+}
+
+.links a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+  color: #bd0000; /* Color más oscuro al pasar el ratón */
+}
+
+.custom-button {
+  background-color: #bd0000; // Color de fondo
+  color: white; // Color del texto
+  padding: 10px 20px; // Espaciado interno
+  border-radius: 10px; // Bordes redondeados
+  border: none; // Sin borde
+  font-size: 16px; // Tamaño del texto
+  cursor: pointer; // Cursor de puntero al pasar el ratón
+}
+
+ion-card-content{
+  text-align: left;
+  color:#000000;
+}
+
+footer {
+  --background: #fff; /* Color de fondo del footer, ajusta según sea necesario */
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between; /* Distribuye los botones de manera uniforme */
+  width: 100%; /* Asegura que los botones ocupen todo el ancho del toolbar */
+}
+
+ion-button {
+  flex: 1; /* Asegura que los botones se expandan y ocupen el espacio */
+  text-align: center; /* Centra el texto e íconos dentro de los botones */
+}

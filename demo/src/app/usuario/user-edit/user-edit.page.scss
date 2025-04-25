@@ -1,0 +1,69 @@
+/* Contenedor principal del formulario */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+ion-menu-button {
+  color: #bd0000;
+}
+
+.icons-color {
+  color: #bd0000;
+}
+
+/* Botón principal del formulario */
+ion-button {
+  --background: #bd0000bf; /* Color de fondo rojo */
+  color: white; /* Color del texto en blanco */
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  flex: 1;
+  width: 100%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+/* Estilo de los campos de formulario */
+ion-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+ion-label {
+  color: #4a4a4a;
+  font-size: 1.2rem;
+}
+
+ion-input {
+  color: #000000;
+  border-bottom: 1px solid #bd0000; /* Línea inferior roja */
+}
+
+/* Estilo de los íconos */
+.file-icon {
+  font-size: 24px;
+  color: #bd0000;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+footer {
+  --background: #fff;
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Empleado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="employeeForm" (ngSubmit)="updateEmployee()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Cargo</ion-label>
+        <ion-input formControlName="cargo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Salario</ion-label>
+        <ion-input formControlName="salario" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Departamento</ion-label>
+        <ion-input formControlName="departamento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Género</ion-label>
+        <ion-select formControlName="genero">
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Femenino">Femenino</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Fecha de Ingreso</ion-label>
+        <ion-datetime formControlName="fechaIngreso" display-format="MM/DD/YYYY"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Teléfono</ion-label>
+        <ion-input formControlName="telefono" type="tel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Imagen de Perfil</ion-label>
+        <ion-input formControlName="imgPerfil" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="button-container">
+      <ion-button expand="block" type="submit">Guardar Cambios</ion-button>
+      <ion-button expand="block" color="light" (click)="cancelEdit()">Cancelar</ion-button>
+    </div>
+  </form>
+</ion-content>

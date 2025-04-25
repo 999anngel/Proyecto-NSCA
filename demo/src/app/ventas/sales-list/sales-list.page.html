@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="header-container">
+    <div class="search-container">
+      <ion-input placeholder="Buscar venta" class="search-input" color="dark"></ion-input>
+    </div>
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let venta of ventas">
+      <ion-item slot="header">
+        <ion-label>{{ venta.fecha | date: 'shortDate' }} - Total: {{ venta.total | currency }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>Usuario ID: {{ venta.idUsuario }}</p>
+        <p>Método de Pago: {{ venta.metodoPago }}</p>
+        <p>Productos:</p>
+        <ul>
+          <li *ngFor="let producto of venta.productos">
+            {{ producto.nombre }} (Cantidad: {{ producto.cantidad }}, Precio: {{ producto.precio | currency }})
+          </li>
+        </ul>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <style>
+    ion-accordion {
+      margin: 0 auto;
+    }
+
+    ion-accordion.accordion-expanding,
+    ion-accordion.accordion-expanded {
+      width: calc(100% - 32px);
+      margin: 16px auto;
+    }
+
+    ion-accordion.accordion-collapsing ion-item[slot='header'],
+    ion-accordion.accordion-collapsed ion-item[slot='header'] {
+      --background: #ffffff; /* Cambia el color a blanco */
+      --color: #000000;
+    }
+
+    ion-accordion.accordion-expanding ion-item[slot='header'],
+    ion-accordion.accordion-expanded ion-item[slot='header'] {
+      --background: #bd0000; /* Cambia el color a rojo */
+      --color: #ffffff;
+    }
+  </style>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-back-button defaultHref="/" class="icons-color" name="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,79 @@
+/* Contenedor principal del formulario */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+ion-menu-button {
+    color: #bd0000;
+}
+
+.icons-color {
+    color: #bd0000;
+}
+
+/* Botón principal del formulario */
+ion-button {
+    --background: #bd0000bf; /* Color de fondo rojo */
+    color: white; /* Color del texto en blanco */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    flex: 1;
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+/* Estilo de los campos de formulario */
+ion-item {
+    display: flex;
+    flex-direction: column; /* Asegura que el label esté encima del input */
+    margin-bottom: 20px;
+}
+
+ion-label {
+    color: #4a4a4a;
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Aumentar el margen inferior para separar más del input */
+}
+
+ion-input {
+    color: #000000;
+    border-bottom: 1px solid #bd0000; /* Línea inferior roja */
+    padding-top: 10px; /* Espacio interno adicional para el texto */
+    padding-bottom: 10px; /* Espacio interno adicional para el texto */
+}
+
+/* Estilo del texto de ejemplo */
+.example-text {
+    font-size: 0.9rem; /* Tamaño más pequeño para el texto de ejemplo */
+    color: #7a7a7a; /* Color gris para el texto de ejemplo */
+    margin-top: 5px; /* Espacio superior para separar del input */
+}
+
+/* Estilo de los íconos */
+.file-icon {
+    font-size: 24px;
+    color: #bd0000;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+footer {
+    --background: #fff;
+}
+
+ion-toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -1,0 +1,115 @@
+/* Estilos generales */
+ion-menu-button {
+    color: #bd0000;
+}
+
+.icons-color {
+    color: #bd0000; /* Color rojo */
+}
+
+/* Estilos de ion-button */
+.custom-button {
+    --background: #bd0000bf; /* Fondo rojo con transparencia */
+    color: white; /* Color del texto en blanco */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    flex: 1;
+    width: 100%;
+    margin-top: 10%;
+    text-align: center; /* Centrar el texto e íconos */
+}
+
+/* Estilos de tarjetas */
+ion-card {
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+ion-card-content {
+    text-align: left;
+    color: #000000; /* Texto negro */
+}
+
+/* Estilos de ítems de formulario */
+ion-item {
+    display: flex;
+    flex-direction: column; /* Label encima del input */
+    margin-bottom: 20px; /* Más espaciado entre ítems */
+}
+
+/* Label en el formulario */
+ion-label {
+    color: #4a4a4a; /* Color gris oscuro */
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Input en el formulario */
+ion-input {
+    color: #000000; /* Texto negro */
+    border-bottom: 1px solid #bd0000; /* Línea inferior roja */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Estilos de texto introductorio */
+.intro-text {
+    font-size: 1rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos de texto de ejemplo */
+.example-text {
+    font-size: 0.9rem;
+    color: #7a7a7a; /* Color gris claro */
+    margin-top: 5px;
+}
+
+/* Estilos de íconos de archivos */
+.file-icon {
+    font-size: 24px;
+    color: #bd0000; /* Ícono rojo */
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Botón de eliminación */
+.delete-button {
+    margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+/* Estilos para el contenedor de la página de administrador */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Estilos de footer */
+footer {
+    --background: #fff; /* Fondo blanco */
+}
+
+/* Estilos de la barra de herramientas del footer */
+ion-toolbar {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+/* Botones del footer */
+.footer-buttons {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones */
+    width: 100%;
+}
+
+/* Botones en el footer */
+ion-button {
+    flex: 1; /* Los botones ocupan todo el espacio */
+    text-align: center; /* Centra el texto e íconos */
+}

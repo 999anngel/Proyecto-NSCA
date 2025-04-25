@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="productForm" (ngSubmit)="updateProduct()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input formControlName="descripcion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Precio</ion-label>
+        <ion-input formControlName="precio" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Cantidad</ion-label>
+        <ion-input formControlName="cantidad" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Categoría</ion-label>
+        <ion-input formControlName="categoria"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Género</ion-label>
+        <ion-select formControlName="genero">
+          <ion-select-option value="Hombre">Hombre</ion-select-option>
+          <ion-select-option value="Mujer">Mujer</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Color</ion-label>
+        <ion-input formControlName="color"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Imagen 1</ion-label>
+        <ion-input formControlName="img1" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Imagen 2</ion-label>
+        <ion-input formControlName="img2" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Imagen 3</ion-label>
+        <ion-input formControlName="img3" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Imagen 4</ion-label>
+        <ion-input formControlName="img4" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="button-container">
+      <ion-button expand="block" type="submit">Guardar Cambios</ion-button>
+      <ion-button expand="block" color="light" (click)="cancelEdit()">Cancelar</ion-button>
+    </div>
+  </form>
+</ion-content>

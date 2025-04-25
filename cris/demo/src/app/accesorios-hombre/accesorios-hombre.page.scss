@@ -1,0 +1,149 @@
+ion-menu-button {
+    color: #bd0000;
+  }
+  
+  .icons-color {
+    color: #bd0000;
+  }
+  
+  /* Contenedor principal, centrado con ajuste para el notch */
+  #container {
+    text-align: center;
+    padding: env(safe-area-inset-top) 16px; /* Añade padding en la parte superior para evitar el notch */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del contenedor */
+  }
+  
+  /* Estilo para los títulos dentro del contenedor */
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  /* Estilo para los párrafos dentro del contenedor */
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+  
+  /* Estilo para los enlaces dentro del contenedor */
+  #container a {
+    text-decoration: none;
+  }
+  
+  /* Margen para el diseño de la página */
+  .ion-margin-top-custom {
+    margin-top: 32px; /* Ajusta el margen superior para evitar el contenido pegado al borde superior */
+  }
+  
+  /* Ajusta el margen inferior de las secciones */
+  .ion-margin-bottom-custom {
+    margin-bottom: 32px; /* Ajusta el margen inferior para una separación adecuada */
+  }
+  
+  /* Clase para ocultar el icono de búsqueda cuando la barra de búsqueda está visible */
+  
+  /* Estilos para el contenedor de búsqueda */
+  .fondo {
+    display: flex;
+    justify-content: center; /* Corregido 'justify-self' a 'justify-content' */
+    align-items: center;
+    width: 100%; /* Ajusta el ancho del contenedor para que ocupe el ancho completo */
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(126, 126, 126, 0.6);
+    position: relative; /* Necesario para el posicionamiento absoluto del icono */
+  }
+  
+  /* Estilos para el campo de búsqueda */
+  input {
+    width: calc(100% - 40px); /* Ajusta el ancho del input para que no se superponga con el icono */
+    height: 40px; /* Ajusta la altura del input */
+    font-size: 16px; /* Ajusta el tamaño de la fuente del input */
+    border: none; /* Elimina el borde del input */
+    outline: none;
+    background: transparent;
+  }
+  
+  /* Estilos para el icono de búsqueda */
+  .buscar {
+    font-size: 24px; /* Aumenta el tamaño del icono */
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Posiciona el icono a la derecha dentro del contenedor */
+  }
+  
+  /* Estilos para las cartas */
+  ion-card {
+    margin: 10px 0; /* Añade margen entre las cartas */
+  }
+  
+  ion-card-header, ion-card-content {
+    font-size: 12px; /* Ajusta el tamaño de la fuente dentro de la tarjeta */
+  }
+  
+  /* Estilo para los títulos dentro de las tarjetas */
+  ion-card-title {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del título dentro de la tarjeta */
+  }
+  
+  /* Estilo para el contenido de las tarjetas */
+  ion-card-content p {
+    font-size: 12px; /* Ajusta el tamaño de la fuente del contenido dentro de la tarjeta */
+  }
+  
+  .custom-button {
+    background-color: #bd0000; // Color de fondo
+    color: white; // Color del texto
+    padding: 10px 20px; // Espaciado interno
+    border-radius: 10px; // Bordes redondeados
+    border: none; // Sin borde
+    font-size: 16px; // Tamaño del texto
+    cursor: pointer; // Cursor de puntero al pasar el ratón
+  }
+  
+  ion-card-content{
+    text-align: left;
+    color:#000000;
+  }
+  
+  footer {
+    --background: #fff; /* Color de fondo del footer, ajusta según sea necesario */
+  }
+  
+  ion-toolbar {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones de manera uniforme */
+    width: 100%; /* Asegura que los botones ocupen todo el ancho del toolbar */
+  }
+  
+  ion-button {
+    flex: 1; /* Asegura que los botones se expandan y ocupen el espacio */
+    text-align: center; /* Centra el texto e íconos dentro de los botones */
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Impide que las cartas se redimensionen automáticamente */
+    width: 80%; /* Ajusta el ancho de las cartas */
+    max-width: 300px; /* Ancho máximo de las cartas */
+    width: 100%;
+    height: 210px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    background-color: #f5f5f5f1;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px; /* Ajusta el espacio entre las cartas según sea necesario */
+    padding: 16px;
+  }

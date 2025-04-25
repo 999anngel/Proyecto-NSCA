@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resultado de la Compra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Si la transacción fue exitosa -->
+  <div *ngIf="status === 'success'" class="ion-padding">
+    <ion-icon name="checkmark-circle" color="success" size="large"></ion-icon>
+    <h2>¡Compra Exitosa!</h2>
+    <p>Tu pago ha sido procesado correctamente. ¡Gracias por tu compra!</p>
+  </div>
+
+  <!-- Si la transacción fue rechazada -->
+  <div *ngIf="status === 'failure'" class="ion-padding">
+    <ion-icon name="close-circle" color="danger" size="large"></ion-icon>
+    <h2>Pago Rechazado</h2>
+    <p>Hubo un problema al procesar tu pago. Por favor, intenta nuevamente o utiliza otro método de pago.</p>
+  </div>
+
+  <!-- Si la transacción está pendiente -->
+  <div *ngIf="status === 'pending'" class="ion-padding">
+    <ion-icon name="hourglass" color="warning" size="large"></ion-icon>
+    <h2>Pago Pendiente</h2>
+    <p>Tu pago está en proceso. Te notificaremos cuando se complete.</p>
+  </div>
+
+  <!-- Si hubo un error al verificar el estado -->
+  <div *ngIf="status === 'error'" class="ion-padding">
+    <ion-icon name="alert-circle" color="danger" size="large"></ion-icon>
+    <h2>Error al Procesar Pago</h2>
+    <p>Hubo un problema al verificar el estado de tu pago. Por favor, intenta nuevamente más tarde.</p>
+  </div>
+</ion-content>

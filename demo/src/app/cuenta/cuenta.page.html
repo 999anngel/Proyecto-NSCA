@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="usuario">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Perfil de Usuario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input [value]="usuario.nombre" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Apellido</ion-label>
+          <ion-input [value]="usuario.apellido" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Correo Electrónico</ion-label>
+          <ion-input [value]="usuario.correo" readonly></ion-input>
+        </ion-item>
+        <ion-list>
+          <!-- Mostrar Método de Pago 1 si existe -->
+          <ion-item *ngIf="usuario.metodoPago1" [routerLink]="['/ver-tarjeta', usuario.metodoPago1, usuario.id ]">
+            <ion-label>Método de Pago 1</ion-label>
+            <ion-input value="**** {{usuario.metodoPago1.slice(-4)}}" readonly></ion-input>
+          </ion-item>
+          <!-- Mostrar Método de Pago 2 si existe -->
+          <ion-item *ngIf="usuario.metodoPago2" [routerLink]="['/ver-tarjeta', usuario.metodoPago2, usuario.id ]">
+            <ion-label>Método de Pago 2</ion-label>
+            <ion-input value="**** {{usuario.metodoPago2.slice(-4)}}" readonly></ion-input>
+          </ion-item>
+          <!-- Mostrar Método de Pago 3 si existe -->
+          <ion-item *ngIf="usuario.metodoPago3" [routerLink]="['/ver-tarjeta', usuario.metodoPago3, usuario.id ]">
+            <ion-label>Método de Pago 3</ion-label>
+            <ion-input value="**** {{usuario.metodoPago3.slice(-4)}}" readonly></ion-input>
+          </ion-item>
+          <!-- Opción para añadir nuevo método de pago solo si hay menos de 3 métodos -->
+          <ion-item *ngIf="!usuario.metodoPago1 || !usuario.metodoPago2 || !usuario.metodoPago3" button [routerLink]="['/metodo-add', usuario.id]">
+            <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+            <ion-label>+ Añadir método de pago</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="settings-outline"></ion-icon>
+      <ion-label>Configuración de la cuenta</ion-label>
+    </ion-item>
+    <ion-item (click)="confirmLogout()">
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      <ion-label>Cerrar sesión</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cart-list', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="cart-outline"></ion-icon>
+      </ion-button>      
+      <ion-button fill="clear">
+        <ion-icon class="icons-color" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

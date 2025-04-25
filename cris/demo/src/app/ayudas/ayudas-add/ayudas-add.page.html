@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Nueva Ayuda</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/ayudas"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="admin-container" padding>
+  <div class="card">
+    <form [formGroup]="ayudaForm" (ngSubmit)="onFormSubmit()">
+      <ion-item class="form-item">
+        <ion-label position="floating">Pregunta</ion-label>
+        <ion-input type="text" formControlName="pregunta"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="floating">Respuesta</ion-label>
+        <ion-input type="text" formControlName="respuesta"></ion-input>
+      </ion-item>
+      <ion-button type="submit" class="custom-button" [disabled]="!ayudaForm.valid">Agregar Ayuda</ion-button>
+    </form>
+  </div>
+</ion-content>

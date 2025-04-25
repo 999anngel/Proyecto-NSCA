@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="admin-container"> <!-- Contenedor principal -->
+    <h2>Déjanos tu comentario</h2> <!-- Título principal -->
+    
+    <!-- Mensaje introductorio -->
+    <p class="intro-text">Tu opinión sobre nuestra página es muy importante para nosotros. Déjanos tu comentario y ayúdanos a mejorar.</p>
+    
+    <div class="card">
+      <form [formGroup]="feedbackForm" (ngSubmit)="onFormSubmit()">
+        <ion-item class="form-item">
+          <ion-label position="floating">Nombre Completo</ion-label>
+          <ion-input 
+            type="text" 
+            formControlName="nombreCompleto" 
+            [ngClass]="{'invalid': feedbackForm.get('nombreCompleto')?.invalid && (feedbackForm.get('nombreCompleto')?.touched || feedbackForm.get('nombreCompleto')?.dirty)}">
+          </ion-input>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label>Calificación</ion-label>
+          <ion-select 
+            formControlName="calificacion" 
+            placeholder="Selecciona"
+            [ngClass]="{'invalid': feedbackForm.get('calificacion')?.invalid && (feedbackForm.get('calificacion')?.touched || feedbackForm.get('calificacion')?.dirty)}">
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="form-item">
+          <ion-label position="floating">Comentario</ion-label>
+          <ion-textarea 
+            formControlName="comentario"
+            [ngClass]="{'invalid': feedbackForm.get('comentario')?.invalid && (feedbackForm.get('comentario')?.touched || feedbackForm.get('comentario')?.dirty)}">
+          </ion-textarea>
+        </ion-item>
+        <ion-button 
+          type="submit" 
+          class="custom-button" 
+          [disabled]="!feedbackForm.valid">Enviar
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cart-list', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="cart-outline"></ion-icon>
+      </ion-button>      
+      <ion-button fill="clear" [routerLink]="[userRoleLink]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

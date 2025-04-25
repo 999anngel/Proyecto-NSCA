@@ -1,0 +1,1104 @@
+{
+  "cartitems": [
+    {
+      "id": "1",
+      "idUsuario": "1",
+      "idProducto": "1",
+      "nombre": "Nike Air Max Plus Tn ",
+      "precio": 189990,
+      "cantidad": 1,
+      "img": "producto_1_1.png",
+      "subtotal": 189990,
+      "fechaCreacion": "2024-11-22T15:35:11.055Z"
+    }
+  ],
+  "sesiones": [
+    {
+      "id": "1",
+      "idUsuario": "1",
+      "rol": "usuario"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Nike Air Max Plus Tn ",
+      "descripcion": "Zapatillas urbanas.",
+      "precio": 189990,
+      "stock": 497,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "Blanco",
+      "img1": "producto_1_1.png",
+      "img2": "producto_1_2.png",
+      "img3": "producto_1_3.png",
+      "img4": "producto_1_4.png",
+      "ventas": 3
+    },
+    {
+      "id": "2",
+      "nombre": "Nike Court Legacy Lift",
+      "descripcion": "Zapatillas clásicas con un toque de estilo urbano.",
+      "precio": 92990,
+      "stock": 289,
+      "categoria": "Zapatillas",
+      "genero": "Mujer",
+      "color": "Blanco",
+      "img1": "producto_2_1.png",
+      "img2": "producto_2_2.png",
+      "img3": "producto_2_3.png",
+      "img4": "producto_2_4.png",
+      "ventas": 1
+    },
+    {
+      "id": "3",
+      "nombre": "Nike Air Force 1 '07",
+      "descripcion": "Zapatillas icónicas con diseño robusto y elegante.",
+      "precio": 119990,
+      "stock": 100,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "Negro",
+      "img1": "producto_3_1.png",
+      "img2": "producto_3_2.png",
+      "img3": "producto_3_3.png",
+      "img4": "producto_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "4",
+      "nombre": "Nike Miler",
+      "descripcion": "Polera de Running Dri-Fit/UV para Hombre",
+      "precio": 33990,
+      "stock": 100,
+      "categoria": "Ropa",
+      "genero": "Hombre",
+      "color": "Negro",
+      "img1": "ropa_h_1_1.png",
+      "img2": "ropa_h_1_2.png",
+      "img3": "ropa_h_1_3.png",
+      "img4": "ropa_h_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "5",
+      "nombre": "Liverpool alternativo",
+      "descripcion": "Polera de fútbol Nike Dri-FIT Replica para hombre",
+      "precio": 79990,
+      "stock": 70,
+      "categoria": "Ropa",
+      "genero": "Hombre",
+      "color": "blanca",
+      "img1": "ropa_h_2_1.png",
+      "img2": "ropa_h_2_2.png",
+      "img3": "ropa_h_2_3.png",
+      "img4": "ropa_h_2_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "6",
+      "nombre": "Nike Classic",
+      "descripcion": "Pantalones de tiro medio oversized con protección UV para mujer",
+      "precio": 56990,
+      "stock": 100,
+      "categoria": "Ropa",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "ropa_m_1_1.png",
+      "img2": "ropa_m_1_2.png",
+      "img3": "ropa_m_1_3.png",
+      "img4": "ropa_m_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "7",
+      "nombre": "Nike Sportswear",
+      "descripcion": "Chaqueta para mujer",
+      "precio": 84990,
+      "stock": 100,
+      "categoria": "Ropa",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "ropa_m_2_1.png",
+      "img2": "ropa_m_2_2.png",
+      "img3": "ropa_m_2_3.png",
+      "img4": "ropa_m_2_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "8",
+      "nombre": "Nike Sportswear",
+      "descripcion": "Chaqueta para mujer",
+      "precio": 98990,
+      "stock": 100,
+      "categoria": "Ropa",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "ropa_m_3_1.png",
+      "img2": "ropa_m_3_2.png",
+      "img3": "ropa_m_3_3.png",
+      "img4": "ropa_m_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "9",
+      "nombre": "Nike Cushioned",
+      "descripcion": "Calcetines (1 par)",
+      "precio": 16990,
+      "stock": 100,
+      "categoria": "Accesorios",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "ropa_m_4_1.png",
+      "img2": "ropa_m_4_2.png",
+      "img3": "ropa_m_4_3.png",
+      "img4": "ropa_m_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "10",
+      "nombre": "Nike Elemental",
+      "descripcion": "Bolso",
+      "precio": 37990,
+      "stock": 100,
+      "categoria": "Accesorios",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "assesorios_1_1.png",
+      "img2": "assesorios_1_2.png",
+      "img3": "assesorios_1_3.png",
+      "img4": "assesorios_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "11",
+      "nombre": "Nike Mercurial",
+      "descripcion": "Zapatos de fútbol FG de corte high",
+      "precio": 291990,
+      "stock": 100,
+      "categoria": "Deportivo",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "producto_4_1.png",
+      "img2": "producto_4_2.png",
+      "img3": "producto_4_3.png",
+      "img4": "producto_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "12",
+      "nombre": "Nike Air Max Dn SE",
+      "descripcion": "Zapatillas",
+      "precio": 192990,
+      "stock": 100,
+      "categoria": "Zapatillas",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "producto_5_1.png",
+      "img2": "producto_5_2.png",
+      "img3": "producto_5_3.png",
+      "img4": "producto_5_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "13",
+      "nombre": "Nike Mercurial Superfly 5",
+      "descripcion": "Las Nike Mercurial Superfly V 2016 destacan por su diseño aerodinámico que mejora la agilidad y velocidad en el fútbol.",
+      "precio": 229990,
+      "stock": 105,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "producto_6_1.png",
+      "img2": "producto_6_2.png",
+      "img3": "producto_6_3.png",
+      "img4": "producto_6_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "14",
+      "nombre": "Nike Indy Light Support",
+      "descripcion": "Peto ajustable para mujer.",
+      "precio": 35990,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "deportivo_m_1_1.png",
+      "img2": "deportivo_m_1_1.png",
+      "img3": "deportivo_m_1_1.png",
+      "img4": "deportivo_m_1_1.png",
+      "ventas": 0
+    },
+    {
+      "id": "15",
+      "nombre": "Nike Trail",
+      "descripcion": "Polerón con gorro de running de tejido Fleece Dri-FIT para hombre",
+      "precio": 86990,
+      "stock": 130,
+      "categoria": "Ropa",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "ropa_h_4_1.png",
+      "img2": "ropa_h_4_2.png",
+      "img3": "ropa_h_4_3.png",
+      "img4": "ropa_h_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "16",
+      "nombre": "Nike",
+      "descripcion": "Shorts cargo de tejido Woven para hombre",
+      "precio": 74990,
+      "stock": 130,
+      "categoria": "Ropa",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "ropa_h_3_1.png",
+      "img2": "ropa_h_3_2.png",
+      "img3": "ropa_h_3_3.png",
+      "img4": "ropa_h_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "17",
+      "nombre": "Nike Tech",
+      "descripcion": "Polerón con gorro de cierre completo para hombre",
+      "precio": 134990,
+      "stock": 130,
+      "categoria": "Ropa",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "ropa_h_5_1.png",
+      "img2": "ropa_h_5_2.png",
+      "img3": "ropa_h_5_3.png",
+      "img4": "ropa_h_5_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "18",
+      "nombre": "Nike Solo Swoosh",
+      "descripcion": "Chaqueta para Hombre",
+      "precio": 124990,
+      "stock": 130,
+      "categoria": "Ropa",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "ropa_h_6_1.png",
+      "img2": "ropa_h_6_2.png",
+      "img3": "ropa_h_6_3.png",
+      "img4": "ropa_h_6_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "19",
+      "nombre": "Nike W NSW PHNX FLC",
+      "descripcion": "Polerón con logotipo oversized de cierre 1/4 para mujer",
+      "precio": 76990,
+      "stock": 130,
+      "categoria": "Ropa",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "ropa_m_5_1.png",
+      "img2": "ropa_m_5_2.png",
+      "img3": "ropa_m_5_3.png",
+      "img4": "ropa_m_5_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "20",
+      "nombre": "Nike Phoenix Fleece",
+      "descripcion": "Polerón Oversized para mujer",
+      "precio": 65990,
+      "stock": 130,
+      "categoria": "Ropa",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "ropa_m_6_1.png",
+      "img2": "ropa_m_6_2.png",
+      "img3": "ropa_m_6_3.png",
+      "img4": "ropa_m_6_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "21",
+      "nombre": "Nike Sunsset",
+      "descripcion": "Zapatilla Atardecer",
+      "precio": 189990,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "zapatillas_h_1_1.png",
+      "img2": "Zapatillas_h_1_2.png",
+      "img3": "Zapatillas_h_1_3.png",
+      "img4": "Zapatillas_h_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "22",
+      "nombre": "JORDAN SPIZIKE LOW ",
+      "descripcion": "Zapatillas para hombre",
+      "precio": 169990,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "zapatillas_h_2_1.png",
+      "img2": "Zapatillas_h_2_2.png",
+      "img3": "Zapatillas_h_2_3.png",
+      "img4": "Zapatillas_h_2_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "23",
+      "nombre": "Nike Air Max Plus Tn ",
+      "descripcion": "Zapatillas para hombre",
+      "precio": 189990,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "zapatillas_h_3_1.png",
+      "img2": "Zapatillas_h_3_2.png",
+      "img3": "Zapatillas_h_3_3.png",
+      "img4": "Zapatillas_h_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "24",
+      "nombre": "Nike Air Max 90",
+      "descripcion": "Zapatillas para hombre",
+      "precio": 139990,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "zapatillas_h_4_1.png",
+      "img2": "zapatillas_h_4_2.png",
+      "img3": "zapatillas_h_4_3.png",
+      "img4": "zapatillas_h_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "25",
+      "nombre": "Nike Air Max Tn",
+      "descripcion": "Zapatillas para Mujer",
+      "precio": 192900,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "zapatillas_m_1_1.png",
+      "img2": "zapatillas_m_1_2.png",
+      "img3": "zapatillas_m_1_3.png",
+      "img4": "zapatillas_m_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "26",
+      "nombre": "Nike Air Max 90 Futura",
+      "descripcion": "Zapatillas para Mujer",
+      "precio": 103900,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "zapatillas_m_2_1.png",
+      "img2": "zapatillas_m_2_2.png",
+      "img3": "zapatillas_m_2_3.png",
+      "img4": "zapatillas_m_2_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "27",
+      "nombre": "Nike Air Humara",
+      "descripcion": "Zapatillas para Mujer",
+      "precio": 135900,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "zapatillas_m_3_1.png",
+      "img2": "zapatillas_m_3_2.png",
+      "img3": "zapatillas_m_3_3.png",
+      "img4": "zapatillas_m_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "28",
+      "nombre": "Nike Air Max Portal",
+      "descripcion": "Zapatillas para Mujer",
+      "precio": 119900,
+      "stock": 130,
+      "categoria": "Zapatillas",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "zapatillas_m_4_1.png",
+      "img2": "zapatillas_m_4_2.png",
+      "img3": "zapatillas_m_4_3.png",
+      "img4": "zapatillas_m_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "29",
+      "nombre": "Nike Cushioned",
+      "descripcion": "Calcetines Unisex (3 pares)",
+      "precio": 14900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "assesorios_h_1_1.png",
+      "img2": "assesorios_h_1_1.png",
+      "img3": "assesorios_h_1_1.png",
+      "img4": "assesorios_h_1_1.png",
+      "ventas": 0
+    },
+    {
+      "id": "30",
+      "nombre": "Nike Club",
+      "descripcion": "Gorro desestructurada Futura Wash",
+      "precio": 25900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "assesorios_2_1.png",
+      "img2": "assesorios_2_2.png",
+      "img3": "assesorios_2_1.png",
+      "img4": "assesorios_2_2.png",
+      "ventas": 0
+    },
+    {
+      "id": "31",
+      "nombre": "Nike Sportswear",
+      "descripcion": "Bolso Unisex",
+      "precio": 29900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "assesorios_3_1.png",
+      "img2": "assesorios_3_2.png",
+      "img3": "assesorios_3_1.png",
+      "img4": "assesorios_3_2.png",
+      "ventas": 0
+    },
+    {
+      "id": "32",
+      "nombre": "Nike Sportswear",
+      "descripcion": "Bolso Unisex",
+      "precio": 29900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "assesorios_3_1.png",
+      "img2": "assesorios_3_2.png",
+      "img3": "assesorios_3_1.png",
+      "img4": "assesorios_3_2.png",
+      "ventas": 0
+    },
+    {
+      "id": "33",
+      "nombre": "Nike Academy",
+      "descripcion": "Pelota de Futbol",
+      "precio": 34900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "assesorios_4_1.png",
+      "img2": "assesorios_4_2.png",
+      "img3": "assesorios_4_1.png",
+      "img4": "assesorios_4_2.png",
+      "ventas": 0
+    },
+    {
+      "id": "34",
+      "nombre": "Nike Academy",
+      "descripcion": "Pelota de Futbol",
+      "precio": 34900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "assesorios_4_1.png",
+      "img2": "assesorios_4_2.png",
+      "img3": "assesorios_4_1.png",
+      "img4": "assesorios_4_2.png",
+      "ventas": 0
+    },
+    {
+      "id": "35",
+      "nombre": "Nike Gym Club",
+      "descripcion": "Bolso de entrenamiento (24L)",
+      "precio": 34900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "assesorios_5_4.png",
+      "img2": "assesorios_5_2.png",
+      "img3": "assesorios_5_3.png",
+      "img4": "assesorios_5_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "36",
+      "nombre": "Nike Club",
+      "descripcion": "Gorro desestructurado",
+      "precio": 22900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "assesorios_6_4.png",
+      "img2": "assesorios_6_2.png",
+      "img3": "assesorios_6_3.png",
+      "img4": "assesorios_6_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "37",
+      "nombre": "ACG",
+      "descripcion": "Nike ACG Apex",
+      "precio": 22900,
+      "stock": 130,
+      "categoria": "Accesorios",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "assesorios_7_4.png",
+      "img2": "assesorios_7_2.png",
+      "img3": "assesorios_7_3.png",
+      "img4": "assesorios_7_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "38",
+      "nombre": "Nike Phantom Luna 2 Elite",
+      "descripcion": "Zapatos de fútbol de corte high FG",
+      "precio": 291900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "deportivo_h_1_1.png",
+      "img2": "deportivo_h_1_2.png",
+      "img3": "deportivo_h_1_3.png",
+      "img4": "deportivo_h_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "39",
+      "nombre": "Nike Mercurial Vapor 16 Pro",
+      "descripcion": "Zapatillas de fútbol TF de corte low",
+      "precio": 132900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "deportivo_h_2_1.png",
+      "img2": "deportivo_h_2_2.png",
+      "img3": "deportivo_h_2_3.png",
+      "img4": "deportivo_h_2_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "40",
+      "nombre": "Nike Match Jr",
+      "descripcion": "Guantes de fútbol para portero para niños",
+      "precio": 27900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "deportivo_h_3_1.png",
+      "img2": "deportivo_h_3_2.png",
+      "img3": "deportivo_h_3_3.png",
+      "img4": "deportivo_h_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "41",
+      "nombre": "Nike J",
+      "descripcion": "Canilleras de Fútbol",
+      "precio": 15900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Hombre",
+      "color": "negro",
+      "img1": "deportivo_h_4_1.png",
+      "img2": "deportivo_h_4_2.png",
+      "img3": "deportivo_h_4_3.png",
+      "img4": "deportivo_h_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "42",
+      "nombre": "Nike Phantom Luna 2 Elite",
+      "descripcion": "Zapatos de fútbol de corte high FG",
+      "precio": 291900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "deportivo_h_1_1.png",
+      "img2": "deportivo_h_1_2.png",
+      "img3": "deportivo_h_1_3.png",
+      "img4": "deportivo_h_1_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "43",
+      "nombre": "Nike Mercurial Vapor 16 Pro",
+      "descripcion": "Zapatillas de fútbol TF de corte low",
+      "precio": 132900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "deportivo_h_2_1.png",
+      "img2": "deportivo_h_2_2.png",
+      "img3": "deportivo_h_2_3.png",
+      "img4": "deportivo_h_2_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "44",
+      "nombre": "Nike Match Jr",
+      "descripcion": "Guantes de fútbol para portero para niños",
+      "precio": 27900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "deportivo_h_3_1.png",
+      "img2": "deportivo_h_3_2.png",
+      "img3": "deportivo_h_3_3.png",
+      "img4": "deportivo_h_3_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "45",
+      "nombre": "Nike J",
+      "descripcion": "Canilleras de Fútbol",
+      "precio": 15900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "deportivo_h_4_1.png",
+      "img2": "deportivo_h_4_2.png",
+      "img3": "deportivo_h_4_3.png",
+      "img4": "deportivo_h_4_4.png",
+      "ventas": 0
+    },
+    {
+      "id": "46",
+      "nombre": "Nike Academy Team",
+      "descripcion": "Bolso De Mujer",
+      "precio": 57900,
+      "stock": 130,
+      "categoria": "Deportivo",
+      "genero": "Mujer",
+      "color": "negro",
+      "img1": "deportivo_m_2_1.png",
+      "img2": "deportivo_m_2_2.png",
+      "img3": "deportivo_m_2_3.png",
+      "img4": "deportivo_m_2_4.png",
+      "ventas": 0
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Colas",
+      "apellido": "Saldivia",
+      "correo": "soycolas@gmail.com",
+      "contrasena": "soycolas",
+      "metodoPago1": "4345 5910 0990 9009",
+      "metodoPago2": "4345 5910 8732 9183",
+      "metodoPago3": ""
+    }
+  ],
+  "favoritos": [
+    {
+      "id": "1",
+      "id_producto": "1",
+      "nombre_producto": "Nike Air Max Plus Tn",
+      "imagen_producto": "producto_1_1.png"
+    },
+    {
+      "id": "2",
+      "id_producto": "3",
+      "nombre_producto": "Nike Air Force 1 '07",
+      "imagen_producto": "producto_3_1.png"
+    },
+    {
+      "id": "3",
+      "id_producto": "2",
+      "nombre_producto": "Nike Court Legacy Lift",
+      "imagen_producto": "producto_2_1.png"
+    },
+    {
+      "id": "4",
+      "id_producto": "5",
+      "nombre_producto": "Liverpool alternativo",
+      "imagen_producto": "ropa_h_2_1.png"
+    }
+  ],
+  "empleados": [
+    {
+      "id": "1",
+      "nombre": "Patricio",
+      "cargo": "Administrador",
+      "salario": 10000,
+      "departamento": "Administrador",
+      "genero": "Mujer",
+      "fechaIngreso": "2024-10-01",
+      "email": "soymarquez@gmail.com",
+      "password": "soymarquez",
+      "telefono": "976843289",
+      "imgPerfil": "imagen_empleado_1"
+    }
+  ],
+  "pagos": [
+    {
+      "id": "1",
+      "numeroTarjeta": "4345 5910 8732 9183",
+      "fechaVencimiento": "09/29",
+      "cvv": "231",
+      "nombreTitular": "dfsfsddfsfsddfs",
+      "numeroDocumento": "32.123.212-3",
+      "email": "asdasd@gmail.com"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "1",
+      "nombreCompleto": "Jason Altamirano",
+      "calificacion": "5",
+      "comentario": "Excelente pagina y gran variedad de proyectos",
+      "fecha": "2024-10-18T03:37:43.262Z"
+    },
+    {
+      "id": "2",
+      "nombreCompleto": "Cristobalito Muñoz",
+      "calificacion": "4",
+      "comentario": "Buena pagina y buenos precios",
+      "fecha": "2024-10-18T03:38:23.426Z"
+    },
+    {
+      "id": "3",
+      "nombreCompleto": "Nicolas Marquez",
+      "calificacion": "4",
+      "comentario": "Una pagina y unos productos de calidad, aunque le falta un poco de aura",
+      "fecha": "2024-10-18T03:51:45.512Z"
+    },
+    {
+      "id": "4",
+      "nombreCompleto": "Angel Sanchez",
+      "calificacion": "5",
+      "comentario": "Me encanto la pagina sobre todo porque es amigable e intuitiva",
+      "fecha": "2024-10-18T04:07:07.618Z"
+    }
+  ],
+  "ayudas": [
+    {
+      "id": "1",
+      "pregunta": "¿Cuál es la política de devolución?",
+      "respuesta": "Puede devolver los productos dentro de los 30 días posteriores a la compra. Asegúrese de que los artículos estén en su estado original y con las etiquetas intactas. Para iniciar una devolución, póngase en contacto con nuestro servicio de atención al cliente."
+    },
+    {
+      "id": "2",
+      "pregunta": "¿Qué opciones de pago están disponibles?",
+      "respuesta": "Aceptamos pagos con tarjetas de crédito y débito, PayPal y transferencias bancarias. Todas las transacciones se realizan a través de una conexión segura."
+    },
+    {
+      "id": "3",
+      "pregunta": "¿Cómo puedo cambiar mi dirección de envío?",
+      "respuesta": "Si necesita cambiar la dirección de envío, comuníquese con nuestro servicio de atención al cliente lo antes posible. Si su pedido ya ha sido enviado, es posible que no podamos realizar cambios en la dirección."
+    },
+    {
+      "id": "4",
+      "pregunta": "¿Cómo puedo cambiar o cancelar un pedido?",
+      "respuesta": "Para cambiar o cancelar un pedido, contáctenos dentro de las 24 horas posteriores a la realización del pedido. Si el pedido ya ha sido procesado o enviado, no podremos realizar cambios o cancelaciones."
+    },
+    {
+      "id": "5",
+      "pregunta": "¿Qué hacer si recibo un producto defectuoso o incorrecto?",
+      "respuesta": "Si recibe un producto defectuoso o incorrecto, comuníquese con nuestro servicio de atención al cliente inmediatamente. Le proporcionaremos instrucciones para devolver el artículo y recibir un reemplazo o reembolso."
+    }
+  ],
+  "ventas": [
+    {
+      "id": "3b05",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Cushioned",
+          "cantidad": 1,
+          "precio": 16990
+        },
+        {
+          "id": "2",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 2,
+          "precio": 189990
+        },
+        {
+          "id": "3",
+          "nombre": "Liverpool alternativo",
+          "cantidad": 1,
+          "precio": 79990
+        }
+      ],
+      "total": 476960,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-24T19:00:47.087Z"
+    },
+    {
+      "id": "d8bf",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Cushioned",
+          "cantidad": 1,
+          "precio": 16990
+        },
+        {
+          "id": "2",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 2,
+          "precio": 189990
+        },
+        {
+          "id": "3",
+          "nombre": "Liverpool alternativo",
+          "cantidad": 1,
+          "precio": 79990
+        }
+      ],
+      "total": 476960,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-24T19:27:07.819Z"
+    },
+    {
+      "id": "a184",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Cushioned",
+          "cantidad": 1,
+          "precio": 16990
+        },
+        {
+          "id": "2",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 2,
+          "precio": 189990
+        },
+        {
+          "id": "3",
+          "nombre": "Liverpool alternativo",
+          "cantidad": 1,
+          "precio": 79990
+        }
+      ],
+      "total": 476960,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-24T19:28:18.501Z"
+    },
+    {
+      "id": "999a",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Cushioned",
+          "cantidad": 1,
+          "precio": 16990
+        },
+        {
+          "id": "2",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 2,
+          "precio": 189990
+        },
+        {
+          "id": "3",
+          "nombre": "Liverpool alternativo",
+          "cantidad": 1,
+          "precio": 79990
+        }
+      ],
+      "total": 476960,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-24T19:42:20.151Z"
+    },
+    {
+      "id": "eb91",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 10,
+          "precio": 189990
+        },
+        {
+          "id": "2",
+          "nombre": "Liverpool alternativo",
+          "cantidad": 1,
+          "precio": 79990
+        },
+        {
+          "id": "3",
+          "nombre": "Nike Mercurial Superfly 5",
+          "cantidad": 1,
+          "precio": 229990
+        }
+      ],
+      "total": 2209880,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-24T19:43:30.042Z"
+    },
+    {
+      "id": "b4f8",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 1,
+          "precio": 189990
+        }
+      ],
+      "total": 189990,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T01:10:01.975Z"
+    },
+    {
+      "id": "d797",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Air Max Plus Tn",
+          "cantidad": 1,
+          "precio": 189990
+        }
+      ],
+      "total": 189990,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T01:24:53.399Z"
+    },
+    {
+      "id": "7d4f",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Air Max Plus Tn ",
+          "cantidad": 1,
+          "precio": 189990
+        }
+      ],
+      "total": 189990,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T01:30:12.722Z"
+    },
+    {
+      "id": "6a53",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Court Legacy Lift",
+          "cantidad": 10,
+          "precio": 92990
+        }
+      ],
+      "total": 929900,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T01:31:22.893Z"
+    },
+    {
+      "id": "1329",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "2",
+          "nombre": "Nike Court Legacy Lift",
+          "cantidad": 10,
+          "precio": 92990
+        }
+      ],
+      "total": 929900,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T01:33:21.984Z"
+    },
+    {
+      "id": "9aa1",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "2",
+          "nombre": "Nike Court Legacy Lift",
+          "cantidad": 10,
+          "precio": 92990
+        }
+      ],
+      "total": 929900,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T02:11:20.968Z"
+    },
+    {
+      "id": "6bbd",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "5",
+          "nombre": "Liverpool alternativo",
+          "cantidad": 30,
+          "precio": 79990
+        },
+        {
+          "id": "13",
+          "nombre": "Nike Mercurial Superfly 5",
+          "cantidad": 25,
+          "precio": 229990
+        }
+      ],
+      "total": 8149450,
+      "metodoPago": "4345 5910 0990 9009",
+      "fecha": "2024-10-25T02:12:37.013Z"
+    },
+    {
+      "id": "ed2c",
+      "idUsuario": "1",
+      "productos": [
+        {
+          "id": "1",
+          "nombre": "Nike Air Max Plus Tn ",
+          "cantidad": 3,
+          "precio": 189990
+        },
+        {
+          "id": "2",
+          "nombre": "Nike Court Legacy Lift",
+          "cantidad": 1,
+          "precio": 92990
+        }
+      ],
+      "total": 662960,
+      "metodoPago": "4345 5910 8732 9183",
+      "fecha": "2024-11-07T18:37:42.850Z"
+    }
+  ]
+}

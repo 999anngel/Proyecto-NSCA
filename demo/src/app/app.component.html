@@ -1,0 +1,91 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content class="ion-padding">
+        <ion-list id="inbox-list" class="menu-list">
+          <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+
+          <!-- Iteración principal sobre las páginas -->
+          <ng-container *ngFor="let p of appPages; let i = index">
+            <!-- Página sin submenú -->
+            <ion-item 
+              *ngIf="!p.children"
+              routerDirection="root" 
+              [routerLink]="[p.url]" 
+              lines="none" 
+              detail="false"
+              (click)="navigateToPage(p)"
+            >
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'"
+                color="danger"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+
+            <!-- Página con submenú -->
+            <ion-item 
+              *ngIf="p.children"
+              lines="none" 
+              detail="false" 
+              (click)="toggleSubMenu(p)"
+            >
+              <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'"
+                color="danger"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+              <ion-icon slot="end" [name]="p.open ? 'chevron-up' : 'chevron-down'"></ion-icon>
+            </ion-item>
+            
+            <!-- Submenú nivel 1 -->
+            <ion-list *ngIf="p.open" style="margin-left: 25%; margin-top: -10%; border-left: 1px solid #bd0000;">
+              <ng-container *ngFor="let child of p.children">
+                <!-- Submenú sin submenú -->
+                <ion-item 
+                  *ngIf="!child.children"
+                  lines="none"
+                  detail="false"
+                  [routerLink]="child.url"
+                  (click)="navigateToPage(child)"
+                >
+                  <ion-label>{{ child.title }}</ion-label>
+                </ion-item>
+
+                <!-- Submenú con submenú nivel 2 -->
+                <ion-item 
+                  *ngIf="child.children"
+                  lines="none"
+                  detail="false"
+                  (click)="toggleSubMenu(child)"
+                >
+                  <ion-label>{{ child.title }}</ion-label>
+                  <ion-icon slot="end" [name]="child.open ? 'chevron-up' : 'chevron-down'"></ion-icon>
+                </ion-item>
+
+                <!-- Submenú nivel 2 -->
+                <ion-list *ngIf="child.open" style="margin-left: 25%; margin-top: -10%; border-left: 1px solid #bd0000;">
+                  <ion-item 
+                    *ngFor="let grandchild of child.children"
+                    lines="none"
+                    detail="false"
+                    [routerLink]="grandchild.url"
+                    (click)="navigateToPage(grandchild)"
+                  >
+                    <ion-label>{{ grandchild.title }}</ion-label>
+                  </ion-item>
+                </ion-list>
+              </ng-container>
+            </ion-list>
+          </ng-container>
+        </ion-list>
+      </ion-content>
+      <ion-footer>
+        <ion-list>
+          <ion-item routerLink="/ajustes" routerDirection="root" lines="none" detail="false">
+            <ion-icon aria-hidden="true" slot="start" ios="settings-outline" md="settings-outline"
+              color="danger"></ion-icon>
+            <ion-label>Ajustes</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

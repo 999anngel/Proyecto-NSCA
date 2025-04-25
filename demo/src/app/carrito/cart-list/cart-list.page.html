@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card style="background-color: #bd0000;">
+      <ion-card-header>
+        <ion-card-title class="small-text" style="color: #ffffff; text-align: center;">Carrito</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card-content>
+      <!-- Mostrar mensaje si el carrito está vacío -->
+      <div *ngIf="carritoItems.length === 0" style="text-align: center;">
+        <h2>El carrito está vacío.</h2>
+        <p>Agrega productos para continuar con la compra.</p>
+        <button class="custom-button" [routerLink]="['/buscar']">Explorar productos</button>
+      </div>
+
+      <!-- Mostrar lista de productos si el carrito tiene productos -->
+      <ion-list *ngIf="carritoItems.length > 0">
+        <div *ngFor="let carrito of carritoItems" class="product-container">
+          <h2 class="product-title">{{ carrito.nombre }}</h2>
+          <ion-item class="product-item">
+            <ion-thumbnail slot="start">
+              <img src="../assets/img/{{ carrito.img }}" alt="Imagen del producto" />
+            </ion-thumbnail>
+            <ion-label>
+              <h5>Cantidad: {{ carrito.cantidad }}</h5>
+              <h5>{{ carrito.subtotal | currency:'USD':'symbol':'1.0-0' }}</h5>
+            </ion-label>
+            <div class="button-container">
+              <ion-button fill="clear" class="delete-button" (click)="increaseQuantity(carrito.id)"
+                style="color: #bd0000;">
+                +
+              </ion-button>
+              <h5>{{ carrito.cantidad }}</h5>
+              <ion-button fill="clear" class="delete-button" (click)="decreaseQuantity(carrito.id)"
+                style="color: #bd0000;">
+                -
+              </ion-button>
+            </div>
+            <ion-button fill="clear" class="delete-button" (click)="confirmDelete(carrito.id)">
+              <ion-icon name="trash" class="icons-color"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-footer *ngIf="carritoItems.length > 0">
+      <ion-item class="product-item" style="justify-content: center;">
+        <ion-select placeholder="Selecciona método de pago" [(ngModel)]="metodoPagoSeleccionado">
+          <ion-select-option *ngFor="let metodo of opcionesMetodoPago" [value]="metodo">
+            **** **** **** {{ metodo.slice(-4) }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="product-item" style="justify-content: center;">
+        <h3 style="text-align: center;">Total a pagar: {{ total | currency:'USD':'symbol':'1.0-0' }}</h3>
+      </ion-item>
+      <button expand="full" class="custom-button"
+        style="width: 90%; margin-top: 5%; margin-left: 5%; margin-bottom: 5%;" (click)="finalizarCompra()"
+        [disabled]="!metodoPagoSeleccionado">
+        Finalizar compra
+      </button>
+      <button expand="full" class="custom-button"
+        style="width: 90%; margin-top: 5%; margin-left: 5%; margin-bottom: 5%;"
+        (click)="pagar()">comprar transbank</button>
+    </ion-footer>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <ion-icon class="icons-color" name="cart"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="[userRoleLink]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

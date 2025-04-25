@@ -1,0 +1,183 @@
+.icons-color {
+    color: #bd0000;
+  }
+  
+ion-list {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  
+    .product-image {
+      width: 80px; // Tamaño de la imagen, ajusta según sea necesario
+      height: 80px; // Tamaño de la imagen, ajusta según sea necesario
+      margin-right: 15px; // Espacio entre imagen e información
+    }
+  
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .product-name {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  
+    .product-price {
+      font-size: 16px;
+      color: #000;
+    }
+  }
+  
+  /* Contenedor para el buscador y el botón de agregar */
+.header-container {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5; /* Color de fondo opcional */
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .search-input {
+    flex: 1;
+    margin-right: 8px;
+    --padding-start: 16px;
+  }
+  
+  .add-button {
+    background-color: #28a745; /* Color verde */
+    color: white;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 8px;
+    --padding-bottom: 8px;
+  }
+  
+  .add-button ion-icon {
+    font-size: 24px;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .custom-button {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%;
+    height: 50px;
+    background-color: #00000000; /* Color de fondo */
+    color: #bd0000; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor de puntero al pasar el ratón */
+    margin: 0 10px; /* Espacio entre botones */
+}
+
+.icon-large {
+    font-size: 24px; /* Tamaño del icono */
+    color: #bd0000; /* Color del icono */
+}
+
+  
+  .button-container {
+    display: flex;
+    justify-content: center; // Centrar los botones horizontalmente
+    gap: 20px; // Separación entre los botones
+    margin-top: 10px; // Espacio superior para separar del contenido anterior
+  }
+  
+  .custom-button-create {
+    width: 20%;
+    background-color: none; // Color de fondo
+    color: #bd0000; // Color del texto
+    border: none; // Sin borde
+    cursor: pointer; // Cursor de puntero al pasar el ratón
+  }
+
+  .search-input {
+    flex: 1;
+    margin-right: 8px;
+    --padding-start: 16px;
+    border: none; /* Remover bordes por defecto */
+    border-bottom: 1px solid #bd0000; /* Línea inferior */
+    outline: none; /* Sin resplandor al enfoque */
+  }
+ 
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en varias filas */
+    gap: 10px; /* Espacio entre imágenes */
+    margin-top: 10px; /* Espacio superior para separar del contenido anterior */
+  }
+  
+  .image-item {
+    width: calc(50% - 10px); /* Dos imágenes por fila con un pequeño margen */
+  }
+  
+  .product-image {
+    width: 100%; /* Ajustar la imagen al contenedor */
+    height: auto; /* Mantener la proporción */
+  }
+  
+  .header-container {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5; /* Color de fondo opcional */
+  }
+
+  footer {
+    --background: #fff; /* Color de fondo del footer */
+  }
+  
+  ion-toolbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Botones en el footer */
+  .footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  ion-button {
+    flex: 1; /* Los botones ocupan el espacio disponible */
+    text-align: center; /* Centra el texto e íconos */
+  }
+
+  /* Estilos del menú */
+ion-menu-button {
+  color: #bd0000;
+}

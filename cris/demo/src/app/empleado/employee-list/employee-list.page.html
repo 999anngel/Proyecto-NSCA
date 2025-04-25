@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="header-container">
+    <div class="search-container">
+      <ion-input placeholder="Buscar empleado" class="search-input" color="dark"></ion-input>
+      <button [routerLink]="['/employee-add']" class="custom-button-create">
+        <h1>+</h1>
+      </button>
+    </div>
+  </div>
+
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let employee of employees">
+      <ion-item slot="header">
+        <ion-label>{{ employee.nombre }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>Cargo: {{ employee.cargo }}</p>
+        <p>Email: {{ employee.email }}</p>
+        <p>Género: {{ employee.genero }}</p>
+        <p>Departamento: {{ employee.departamento }}</p>
+        <p>Teléfono: {{ employee.telefono }}</p>
+        <p>Contraseña: {{ employee.password }}</p>
+        <div class="button-container">
+          <button class="custom-button" [routerLink]="['/employee-edit', employee.id]">
+            <ion-icon name="pencil-sharp" class="icon-large"></ion-icon>
+          </button>
+          <button class="custom-button" (click)="confirmDelete(employee.id)">
+            <ion-icon name="trash" class="icon-large"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <style>
+    ion-accordion {
+      margin: 0 auto;
+    }
+
+    ion-accordion.accordion-expanding,
+    ion-accordion.accordion-expanded {
+      width: calc(100% - 32px);
+      margin: 16px auto;
+    }
+
+    ion-accordion.accordion-collapsing ion-item[slot='header'],
+    ion-accordion.accordion-collapsed ion-item[slot='header'] {
+      --background: #ffffff;
+      --color: #000000;
+    }
+
+    ion-accordion.accordion-expanding ion-item[slot='header'],
+    ion-accordion.accordion-expanded ion-item[slot='header'] {
+      --background: #bd0000; /* Cambia el color a rojo */
+      --color: #ffffff;
+    }
+  </style>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-back-button defaultHref="/" class="icons-color" name="home">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

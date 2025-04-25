@@ -1,0 +1,176 @@
+ion-menu-button {
+  color: #bd0000;
+}
+
+.icons-color {
+  color: #bd0000;
+}
+
+/* Contenedor principal, centrado con ajuste para el notch */
+#container {
+  text-align: center;
+  padding: env(safe-area-inset-top) 16px; /* Añade padding en la parte superior para evitar el notch */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del contenedor */
+}
+
+/* Estilo para los títulos dentro del contenedor */
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* Estilo para los párrafos dentro del contenedor */
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+/* Estilo para los enlaces dentro del contenedor */
+#container a {
+  text-decoration: none;
+}
+
+/* Margen para el diseño de la página */
+.ion-margin-top-custom {
+  margin-top: 32px; /* Ajusta el margen superior para evitar el contenido pegado al borde superior */
+}
+
+/* Ajusta el margen inferior de las secciones */
+.ion-margin-bottom-custom {
+  margin-bottom: 32px; /* Ajusta el margen inferior para una separación adecuada */
+}
+/* Clase para ocultar el icono de búsqueda cuando la barra de búsqueda está visible */
+
+.fondo {
+  display: flex;
+  justify-content: center; /* Corregido 'justify-self' a 'justify-content' */
+  align-items: center;
+  width: 15%;
+  height: 100%; /* Ajusta la altura del contenedor para que sea adecuado para el icono y el input */
+  background: #ffffff00;
+  border-radius: 15px;
+  padding: 3%;
+  box-shadow: 0 0 10px rgba(126, 126, 126, 0.6);
+  transition: width 0.9s ease-in-out;
+  position: relative; /* Necesario para el posicionamiento absoluto del icono */
+}
+
+.fondo:hover {
+  width: 99%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  font-size: 16px; /* Ajusta el tamaño de la fuente del input para que sea más visible */
+  border: none; /* Elimina el borde del input */
+  outline: none;
+  background: transparent;
+  padding-left: 20px; /* Ajusta el padding para que el texto no se superponga con el icono */
+  color: #bd0000; /* Cambia el color del texto del input aquí */
+}
+
+/* Cambia el color del texto del placeholder */
+input::placeholder {
+  color: #bd0000; /* Cambia el color del placeholder aquí, por ejemplo a un gris claro */
+}
+
+.buscar {
+  font-size: 24px; /* Aumenta el tamaño del icono */
+  cursor: pointer;
+  position: absolute;
+  right: 10px; /* Posiciona el icono a la derecha dentro del contenedor */
+}
+
+#container {
+  text-align: center;
+  padding: env(safe-area-inset-top) 16px; /* Añade padding en la parte superior para evitar el notch */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del contenedor */
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  gap: 16px; /* Espacio entre las cartas */
+}
+
+
+.ion-margin-top-custom {
+  margin-top: 32px; /* Ajusta el margen superior para evitar el contenido pegado al borde superior */
+}
+
+.input-cantidad {
+  border: none; /* Elimina los bordes por defecto del input */
+  border-bottom: 1.5px solid #bd0000; /* Añade un borde inferior con el color deseado */
+  width: 100px; /* Ajusta el ancho del input según sea necesario */
+  padding: 5px; /* Añade espacio interno */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  outline: none; /* Evita el contorno azul al seleccionar */
+}
+
+.input-cantidad:focus {
+  border-bottom: 2.5px solid #bd0000; /* Cambia el color del borde al hacer clic en el input */
+}
+
+
+ion-card {
+  height: 100%; /* Ajusta la altura del ion-card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f5f5f5f1;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Sombra más visible */
+}
+
+.custom-button {
+  background-color: #bd0000; // Color de fondo
+  color: white; // Color del texto
+  padding: 10px 20px; // Espaciado interno
+  border-radius: 10px; // Bordes redondeados
+  border: none; // Sin borde
+  font-size: 16px; // Tamaño del texto
+}
+
+.custom-button2 {
+    background-color: #ffffff00; // Color de fondo
+    color: #000000; // Color del texto
+    padding: 10px 20px; // Espaciado interno
+}
+
+ion-card-content{
+  text-align: left;
+  color:#000000;
+}
+
+footer {
+  --background: #fff; /* Color de fondo del footer, ajusta según sea necesario */
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between; /* Distribuye los botones de manera uniforme */
+  width: 100%; /* Asegura que los botones ocupen todo el ancho del toolbar */
+}
+
+ion-button {
+  flex: 1; /* Asegura que los botones se expandan y ocupen el espacio */
+  text-align: center; /* Centra el texto e íconos dentro de los botones */
+}
+
+.custom-button {
+  background-color: #bd0000; // Color de fondo
+  color: white; // Color del texto
+  padding: 10px 10px; // Espaciado interno
+  border-radius: 20px; // Bordes redondeados
+  border: 30px; // Sin borde
+  font-size: 12px; // Tamaño del texto
+  cursor: pointer; // Cursor de puntero al pasar el ratón
+}

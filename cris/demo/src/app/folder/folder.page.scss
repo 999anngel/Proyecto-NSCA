@@ -1,0 +1,218 @@
+/* Estilos generales */
+
+.card {
+  flex: 0 0 auto;
+  width: 100%; /* Hace que las cartas ocupen todo el ancho disponible */
+  max-width: 400px; /* Ajusta el ancho máximo de las cartas */
+  box-sizing: border-box;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Sombra más visible */
+  border-radius: 15px;
+  background-color: #f5f5f5f1;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px; /* Añade un pequeño margen alrededor de la carta */
+}
+
+/* Imagen dentro de la carta */
+.card ion-img {
+  width: 100%; /* La imagen ocupa todo el ancho de la carta */
+  height: auto; /* La altura se ajusta proporcionalmente */
+  border-bottom: 1px solid #eee; /* Añade una línea suave entre la imagen y el contenido */
+}
+
+/* Contenido de la carta */
+.card ion-card-content {
+  padding: 16px; /* Espaciado interno alrededor del contenido */
+  text-align: center; /* Centra el texto dentro de la carta */
+}
+
+/* Título del producto */
+.card h2 {
+  font-size: 18px; /* Tamaño de la fuente del título */
+  color: #333; /* Color del texto */
+  margin-bottom: 8px; /* Espacio debajo del título */
+}
+
+/* Precio del producto */
+.card h5 {
+  font-size: 16px;
+  color: #bd0000; /* Color del precio en rojo para destacarlo */
+  margin-bottom: 16px; /* Espacio debajo del precio */
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* En pantallas pequeñas, las cartas ocupan el 100% del ancho */
+  }
+}
+
+/* Efecto de borde al presionar la carta */
+.card:active {
+  border: 1px solid #bd0000; /* Borde rojo cuando se presiona */
+  transform: scale(0.98); /* Pequeña reducción de tamaño para dar efecto de pulsación */
+  transition: transform 0.1s ease; /* Transición rápida para la reducción */
+}
+
+
+.cards-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-wrap: wrap; /* Asegura que las cartas se ajusten si hay más de una */
+}
+
+/* Estilos del menú */
+ion-menu-button {
+  color: #bd0000;
+}
+
+.icons-color {
+  color: #bd0000;
+}
+
+/* Contenedor principal */
+#container {
+  text-align: center;
+  padding: env(safe-area-inset-top) 16px;
+  box-sizing: border-box; /* Para evitar que el padding afecte el tamaño total */
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+/* Botones y enlaces */
+#container a {
+  text-decoration: none;
+}
+
+/* Ajuste de márgenes */
+.ion-margin-top-custom {
+  margin-top: 32px;
+}
+
+.ion-margin-bottom-custom {
+  margin-bottom: 32px;
+}
+
+/* Contenedor de la barra de búsqueda */
+.fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #00000000;
+  border-radius: 15px;
+  padding: 3%;
+  position: relative;
+}
+
+
+ion-input {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 20px;
+  color: #000000; /* Color del texto del input */
+}
+
+.buscar {
+  font-size: 24px; /* Tamaño del icono */
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+/* Estilos del carrusel */
+.carousel {
+  height: 250px; /* Ajusta la altura del carrusel según sea necesario */
+}
+
+.carousel .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Botón personalizado */
+.custom-button {
+  background-color: #bd0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilos del footer */
+footer {
+  --background: #fff; /* Color de fondo del footer */
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+}
+
+/* Botones en el footer */
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+ion-button {
+  flex: 1; /* Los botones ocupan el espacio disponible */
+  text-align: center; /* Centra el texto e íconos */
+}
+
+/* Estilos para las cartas de categorías */
+.category-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaciado entre cartas */
+}
+
+.category-left {
+  flex-direction: row; /* Imagen a la izquierda */
+}
+
+.category-right {
+  flex-direction: row-reverse; /* Imagen a la derecha */
+}
+
+/* Estilo específico para la imagen dentro de la carta */
+.category-item ion-img {
+  width: 40%; /* Ancho de la imagen */
+  height: auto; /* Altura automática */
+}
+
+/* Estilo para el contenido de la carta */
+.category-item ion-card {
+  width: 60%; /* Ancho del contenido de la carta */
+  text-align: center; /* Centrar texto en la carta */
+}

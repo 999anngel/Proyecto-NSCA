@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" formControlName="correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName="contrasena"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none" class="remember-me">
+          <ion-checkbox formControlName="rememberMe"></ion-checkbox>
+          <ion-label>Recordar contraseña</ion-label>
+        </ion-item>
+
+        <button class="custom-button" type="submit" style="width: 100%;">Login</button>
+
+        <div class="links">
+          <div class="links">
+            <a [routerLink]="['/register']">¿Has olvidado tu contraseña?</a>
+          </div>
+          <div class="links">
+            <a [routerLink]="['/register']">¿No tienes una cuenta?Registrarse</a>
+          </div>
+        </div>
+      </form>
+      <ion-item *ngIf="sesion">
+        <ion-input formControlName="sesion" [value]="sesion.id" ></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button class="icons-color" defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
+

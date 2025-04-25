@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div>
+    <ion-card style="width: 100%; margin-left: 0%;">
+      <ng-container *ngIf="producto">
+        <!-- Sección de imágenes -->
+        <ion-img [src]="currentImage" alt="" class="card-image"></ion-img>
+        <div style="display: flex; justify-content: center; gap: 10px;">
+          <button (click)="previousImage()" class="custom-button2">
+            < </button>
+              <button (click)="nextImage()" class="custom-button2"> > </button>
+        </div>
+
+        <!-- Cabecera de la tarjeta -->
+        <ion-card-header>
+          <p>{{ producto.descripcion }}</p>
+          <ion-card-subtitle>{{ producto.precio | currency:'USD':'symbol':'1.0-0' }}</ion-card-subtitle>
+          <ion-card-title>{{ producto.nombre }}</ion-card-title>
+        </ion-card-header>
+
+        <!-- Contenido de la tarjeta -->
+        <div class="carrito-form-container">
+          <form [formGroup]="carritoForm" (ngSubmit)="onCartFormSubmit()">
+            <ion-card-content>
+              <p>Seleccione la cantidad
+                <input type="number" min="1" step="1" value="1" max="{{producto.stock}}" class="input-cantidad"
+                  formControlName="cantidad" />
+              </p>
+            </ion-card-content>
+
+            <!-- Botón de compra y formulario de favoritos -->
+
+
+            <input type="hidden" formControlName="idProducto" [value]="producto.id">
+            <input type="hidden" formControlName="nombre" [value]="producto.nombre">
+            <input type="hidden" formControlName="precio" [value]="producto.precio">
+            <input type="hidden" formControlName="img" [value]="producto.img1">
+            <button type="submit" [disabled]="!carritoForm.valid" expand="full" class="custom-button"
+              style="width: 90%; margin-top: 5%; margin-left: 5%;">Añadir al carrito</button>
+
+          </form>
+
+
+          <div class="favorito-form-container">
+            <form [formGroup]="favoriteForm" (ngSubmit)="onFormSubmit()">
+              <input type="hidden" formControlName="id_producto" [value]="producto.id">
+              <input type="hidden" formControlName="nombre_producto" [value]="producto.nombre">
+              <input type="hidden" formControlName="imagen_producto" [value]="producto.img1">
+              <button type="submit" [disabled]="!favoriteForm.valid" expand="full" class="custom-button"
+                style="width: 90%; margin-top: 5%; margin-left: 5%; margin-bottom: 5%;">Añadir a favoritos</button>
+            </form>
+          </div>
+        </div>
+      </ng-container>
+
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cart-list', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="cart-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="[userRoleLink]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Ayuda</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/ayudas-list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="updateAyuda()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Pregunta</ion-label>
+        <ion-input [(ngModel)]="ayuda.pregunta" name="pregunta" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Respuesta</ion-label>
+        <ion-input [(ngModel)]="ayuda.respuesta" name="respuesta" required></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-footer>
+      <ion-toolbar>
+        <ion-button expand="block" type="submit" class="custom-button">Guardar Cambios</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+  </form>
+</ion-content>

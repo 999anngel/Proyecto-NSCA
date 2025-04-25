@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mis Favoritos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list padding>
+        <ion-item *ngFor="let favorito of favoritos" detail="false">
+          <ion-avatar slot="start">
+            <img src="../assets/img/{{ favorito.imagen_producto }}" style="object-fit: cover;">
+          </ion-avatar>
+          <ion-label [routerLink]="['/comprar', favorito.id_producto]">
+            <h6>{{ favorito.nombre_producto }}</h6>
+          </ion-label>
+            <ion-button (click)="eliminarFavorito(favorito.id)" fill="clear" class="delete-button">
+              <ion-icon name="trash" class="icons-color"></ion-icon>
+            </ion-button>  
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cart-list', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="cart-outline"></ion-icon>
+      </ion-button>      
+      <ion-button fill="clear" [routerLink]="[userRoleLink]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

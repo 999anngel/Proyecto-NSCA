@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Nuevo Usuario </ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="card">
+    <form [formGroup]="usuarioForm" (ngSubmit)="onFormSubmit()">
+      <ion-item class="form-item">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="user_nombre"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" formControlName="user_apellido"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="email" formControlName="user_correo"></ion-input>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="user_contrasena"></ion-input>
+      </ion-item>
+      <ion-button type="submit"class="custom-button" [disabled]="!usuarioForm.valid">Registrar</ion-button>
+    </form>
+  </div>
+</ion-content>

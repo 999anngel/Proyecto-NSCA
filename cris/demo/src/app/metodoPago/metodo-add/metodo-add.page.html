@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Método de Pago</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="card">
+    <form [formGroup]="metodoForm" (ngSubmit)="onFormSubmit()">
+      
+      <ion-item>
+        <ion-label>Número de Tarjeta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input 
+          formControlName="numeroTarjeta" 
+          type="text" 
+          placeholder="Ej: 5031 4332 1540 6351"
+          (ionInput)="formatCardNumber($event)">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha de Vencimiento</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input 
+        formControlName="fechaVencimiento"
+        (input)="formatExpiryDate($event)"
+        maxlength="5" 
+        placeholder="MM/YY">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>CVV</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input
+            formControlName="cvv"
+            type="text"
+            maxlength="3" 
+            placeholder="Ej: 123"
+            (ionInput)="formatCvv($event)">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nombre del Titular</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input 
+          formControlName="nombreTitular" 
+          type="text" 
+          placeholder="Ej: Jason Sanchez">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Número de Documento</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          formControlName="numeroDocumento"
+          type="text"
+          placeholder="Ej: 12.345.678-9"
+          (ionInput)="formatDocumento($event)">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input 
+          formControlName="email" 
+          type="email" 
+          placeholder="Ej: jason17@gmail.com">
+        </ion-input>
+      </ion-item>
+      
+
+      <ion-button type="submit" class="custom-button" [disabled]="!metodoForm.valid">
+        Agregar Método de Pago
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

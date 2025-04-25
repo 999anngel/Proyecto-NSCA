@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" style="margin-top: 10%;">
+    <div class="fondo">
+      <ion-input type="text" placeholder="Buscar" color="dark" style="flex: 1; max-width: 80%; text-align: center;"></ion-input>
+      <ion-icon class="icons-color buscar" name="search"></ion-icon>
+    </div>
+
+    <div class="cards-container">
+      <ng-container *ngFor="let producto of productosFiltrados">
+        
+        <!-- Log para verificar el valor de la categoría en la consola -->
+        <ion-card class="card" *ngIf="producto.categoria === 'Ropa'" 
+          [routerLink]="['../comprar', producto.id]" id="carta{{ producto.id }}">
+          <!-- Depurar el valor de producto -->
+          <script>
+            console.log(producto);
+          </script>
+          <ion-img src="../assets/img/{{ producto.img1 }}" alt=""></ion-img>
+          <ion-card-content>
+            <h5 style="text-align: center; font-size: 12px; font-weight: bold;">{{producto.nombre}}</h5>
+            <br>
+            <h5 style="text-align: center; font-size: 15px; font-weight: bold;">${{producto.precio}}</h5>
+          </ion-card-content>
+        </ion-card>
+
+      </ng-container>
+    </div>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cart-list', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="cart-outline"></ion-icon>
+      </ion-button>      
+      <ion-button fill="clear" [routerLink]="[userRoleLink]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

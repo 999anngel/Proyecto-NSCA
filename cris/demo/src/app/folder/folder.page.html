@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../assets/img/logo-negro.png" alt="" style="height: 50%; width: 50%;"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar style="height: 75px; margin-top: -13px;">
+      <div class="fondo" style="display: flex; align-items: center; justify-content: center;">
+        <ion-input type="text" color="dark" placeholder="Buscar"
+          style="flex: 1; max-width: 80%; text-align: center;"></ion-input>
+        <ion-icon class="icons-color buscar" name="search"></ion-icon>
+      </div>
+    </ion-toolbar>
+    <ion-header>
+      <ion-toolbar style="height: 1px; margin-top: -13px;">
+      </ion-toolbar>
+    </ion-header>
+  </ion-header>
+
+  <div id="container">
+    <ion-img [src]="currentImage" alt="" style="height: 100%; width: 100%; margin-top: 2%;"></ion-img>
+    <br><br>
+    <ion-img src="../assets/img/productos-destacados.png" alt="" style="margin: 20px; margin-left: -2%;"></ion-img>
+    <div class="cards-container">
+      <ion-card class="card" *ngFor="let producto of productosDestacados | slice:0:3" [routerLink]="['comprar', producto.id]"
+        id="carta{{ producto.id }}">
+        <ion-img src="../assets/img/{{ producto.img1 }}" alt=""></ion-img>
+        <ion-card-content>
+          <h2 style="text-align: center;"><b>{{ producto.nombre }}</b></h2>
+          <h5 style="text-align: center;"><strong>{{ producto.precio | currency: 'USD':'symbol':'1.0-0' }}</strong></h5>
+        </ion-card-content>
+      </ion-card>
+    </div>    
+    <div style="overflow-x: auto; overflow-y: hidden; display: flex; scroll-snap-type: x mandatory;">
+      <div class="video-container" style="position: relative; text-align: center; flex: 0 0 100%; scroll-snap-align: start;" [routerLink]="['comprar', 5]">
+        <video width="100%" height="100%" loop muted autoplay playsinline preload="auto">
+          <source src="../assets/vid/video_carrusel_1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+       </video>             
+    
+        <img src="../assets/img/boton-carrusel.png" alt="Imagen Superpuesta"
+             style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);">
+      </div>
+      <div class="video-container" style="position: relative; text-align: center; flex: 0 0 100%; scroll-snap-align: start;" [routerLink]="['comprar', 13]">
+        <video width="100%" height="100%" loop muted autoplay playsinline preload="auto">
+          <source src="../assets/vid/video_carrusel_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+       </video>  
+    
+        <img src="../assets/img/boton-carrusel.png" alt="Imagen Superpuesta"
+             style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);">
+      </div>
+    </div>
+
+    <div class="categories-section" style="margin-top: 10px;">
+      <ion-img src="../assets/img/categorias.png" alt="" style="margin: 20px;"></ion-img>
+      <div class="categories-container" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; flex-direction: column;">
+        
+        <!-- Primera carta -->
+        <ion-img src="../assets/img/categoria-ropa.png" alt="Ropa" style="width: 109%; height: auto; max-width: 600px; margin-top: 1%; margin-left: -12px;" [routerLink]="['ropa-unisex']"></ion-img>
+    
+        <!-- Segunda carta -->
+        <ion-img src="../assets/img/categoria-zapatillas.png" alt="Zapatillas" style="width: 109%; height: auto; max-width: 600px; margin-top: 1%; margin-left: -12px;" [routerLink]="['zapatillas-unisex']"></ion-img>
+    
+        <!-- Tercera carta -->
+        <ion-img src="../assets/img/categoria-accesorios.png" alt="Accesorios" style="width: 109%; height: auto; max-width: 600px; margin-top: 1%; margin-left: -12px;" [routerLink]="['accesorios-unisex']"></ion-img>
+    
+        <!-- Cuarta carta -->
+        <ion-img src="../assets/img/categoria-deportivo.png" alt="Deportivo" style="width: 109%; height: auto; max-width: 600px; margin-top: 1%; margin-left: -12px;" [routerLink]="['deportivo-unisex']"></ion-img>
+    
+      </div>
+    </div>
+    <br><br>
+    <button class="custom-button" [routerLink]="['/transbank']">comprar transbank</button>
+    <br>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Espacio reservado al inicio si es necesario -->
+    </ion-buttons>
+
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button fill="clear" [routerLink]="['']">
+        <ion-icon class="icons-color" name="home"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/buscar']">
+        <ion-icon class="icons-color" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="['/cart-list', sesion?.idUsuario]">
+        <ion-icon class="icons-color" name="cart-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" [routerLink]="[userRoleLink]">
+        <ion-icon class="icons-color" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

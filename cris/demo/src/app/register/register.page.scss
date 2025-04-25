@@ -1,0 +1,111 @@
+ion-menu-button {
+  color: #bd0000;
+}
+
+.icons-color {
+  color: #bd0000;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+}
+
+ion-card {
+  border-radius: 16px;
+  padding: 20px;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ion-card-header {
+  background: #bd0000;
+  border-radius: 16px 16px 0 0;
+  text-align: center;
+  padding: 16px;
+}
+
+ion-card-title {
+  color: white;
+}
+
+ion-card-content {
+  padding: 10px;
+}
+
+ion-item {
+  --highlight-height: 0;
+  --border-color: transparent; /* Quita el borde de los laterales y superior */
+  --border-width: 0 0 2px 0; /* Solo deja la línea inferior */
+  --border-style: solid;
+  --border-bottom-color: #bd0000; /* Color de la línea inferior */
+  margin-bottom: 20px; /* Espaciado entre los campos */
+  
+  ion-input {
+    --padding-start: 0; /* Elimina el padding en los lados */
+    --padding-end: 0;
+    border-bottom: 2px solid #bd0000; /* Añade la línea roja debajo del input */
+    border-radius: 0; /* Quita los bordes redondeados */
+    transition: border-color 0.3s ease; /* Transición suave del borde */
+  }
+
+  ion-input:focus {
+    border-bottom-color: #bd0000; /* Mantiene el color rojo al enfocar */
+  }
+}
+
+ion-label {
+  font-size: 0.95rem; /* Tamaño de fuente adecuado para etiquetas */
+  margin-bottom: 4px; /* Espacio debajo del label */
+  transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.links a {
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.1s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #bd0000;
+}
+
+.custom-button {
+  background-color: #bd0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  --background: #fff;
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+ion-button {
+  flex: 1;
+  text-align: center;
+}
