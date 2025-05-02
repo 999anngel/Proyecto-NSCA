@@ -23,7 +23,7 @@ export class RegisterPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    // Inicializa el formulario con validacionessss
+    // Inicializa el formulario con validaciones
     this.registerForm = this.formBuilder.group({
       name: [null, Validators.required], // Campo obligatorio: nombre
       apellido: [null, Validators.required], // Campo obligatorio: apellido
@@ -54,7 +54,7 @@ export class RegisterPage implements OnInit {
       id: nuevoId,
       nombre: this.registerForm.value.name,
       apellido: this.registerForm.value.apellido,
-      correo: this.registerForm.value.email,
+      correo: this.registerForm.value.email, // Verificación de un correo único para evitar duplicados
       contrasena: this.registerForm.value.password,
       metodoPago1: '',
       metodoPago2: '',
