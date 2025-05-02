@@ -31,7 +31,7 @@ export class RegisterPage implements OnInit {
       password: [null, [Validators.required, Validators.minLength(8), Validators.pattern('(?=.*[A-Z])')]], // Se requiere al menos una letra mayúscula
       confirmPassword: [null, Validators.required] // Confirmación de contraseña
     });
-    
+
     // Carga usuarios existentes para calcular el ID del nuevo usuario
     this.userService.getUsers().subscribe((usuarios: ClUsuario[]) => {
       this.usuarios = usuarios;
@@ -40,34 +40,35 @@ export class RegisterPage implements OnInit {
 
   // Método llamado al hacer submit en el formulario
   async onRegister() {
-    // Verifica que el formulario sea válido y las contraseñas coincidan
+    // ✅ Validamos que todo el formulario esté bien y que ambas contraseñas coincidan
+    // Esto evita que un usuario se registre con datos incompletos o con errores en las contraseñas
     if (this.registerForm.invalid || this.registerForm.value.password !== this.registerForm.value.confirmPassword) {
       this.presentAlert('Error', 'Formulario inválido o las contraseñas no coinciden.');
       return;
     }
 
-    // Cálculo del nuevo ID en base al usuario con el mayor ID actual
+    // 🔢 Cálculo del nuevo ID en base al usuario con el mayor ID actual
     const nuevoId = this.usuarios.length > 0 ? Math.max(...this.usuarios.map(u => u.id)) + 1 : 1;
 
-    // Construcción del nuevo objeto usuario
+    // 📦 Construcción del nuevo objeto usuario
     const nuevoUsuario: ClUsuario = {
       id: nuevoId,
       nombre: this.registerForm.value.name,
       apellido: this.registerForm.value.apellido,
-      correo: this.registerForm.value.email, // Verificación de un correo único para evitar duplicados
+      correo: this.registerForm.value.email,
       contrasena: this.registerForm.value.password,
       metodoPago1: '',
       metodoPago2: '',
       metodoPago3: ''
     };
 
-    // Muestra una animación de carga mientras se procesa el registro
+    // ⏳ Muestra una animación de carga mientras se procesa el registro
     const loading = await this.loadingController.create({
       message: 'Registrando...'
     });
     await loading.present();
 
-    // Envío del nuevo usuario al servicio y manejo de la respuesta
+    // 🚀 Envío del nuevo usuario al servicio y manejo de la respuesta
     this.userService.addUser(nuevoUsuario).subscribe({
       next: async (res) => {
         await loading.dismiss();
