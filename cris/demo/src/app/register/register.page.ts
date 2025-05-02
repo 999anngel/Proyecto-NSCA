@@ -28,7 +28,7 @@ export class RegisterPage implements OnInit {
       name: [null, Validators.required], // Campo obligatorio: nombre
       apellido: [null, Validators.required], // Campo obligatorio: apellido
       email: [null, [Validators.required, Validators.email]], // Campo obligatorio: correo válido
-      password: [null, [Validators.required, Validators.minLength(6)]], // Mínimo 6 caracteres
+      password: [null, [Validators.required, Validators.minLength(8), Validators.pattern('(?=.*[A-Z])')]], // Se requiere al menos una letra mayúscula
       confirmPassword: [null, Validators.required] // Confirmación de contraseña
     });
     
