@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserServiceService } from '../usuario/user-service.service'; // Servicio para usuarios
-import { LoadingController, AlertController } from '@ionic/angular'; // Importamos AlertController
+import { LoadingController, AlertController } from '@ionic/angular'; // Controladores de carga y alertas
 import { Router } from '@angular/router';
 import { ClUsuario } from '../usuario/modelo/ClUsuario';
 
@@ -11,47 +11,49 @@ import { ClUsuario } from '../usuario/modelo/ClUsuario';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-  registerForm!: FormGroup;
-  usuarios: ClUsuario[] = [];
+  registerForm!: FormGroup; // Formulario reactivo para el registro
+  usuarios: ClUsuario[] = []; // Lista local de usuarios
 
   constructor(
     private formBuilder: FormBuilder,
     private loadingController: LoadingController,
     private userService: UserServiceService,
     private router: Router,
-    private alertController: AlertController // Inyectamos AlertController
+    private alertController: AlertController
   ) {}
 
   ngOnInit() {
-    // Inicializa el formulario de registro con el campo apellido
+    // Inicializa el formulario con validacionessss
     this.registerForm = this.formBuilder.group({
-      name: [null, Validators.required],
-      apellido: [null, Validators.required], // Campo para el apellido
-      email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required, Validators.minLength(6)]],
-      confirmPassword: [null, Validators.required],
+      name: [null, Validators.required], // Campo obligatorio: nombre
+      apellido: [null, Validators.required], // Campo obligatorio: apellido
+      email: [null, [Validators.required, Validators.email]], // Campo obligatorio: correo válido
+      password: [null, [Validators.required, Validators.minLength(6)]], // Mínimo 6 caracteres
+      confirmPassword: [null, Validators.required] // Confirmación de contraseña
     });
     
-    // Obtiene la lista de usuarios para determinar el nuevo ID
+    // Carga usuarios existentes para calcular el ID del nuevo usuario
     this.userService.getUsers().subscribe((usuarios: ClUsuario[]) => {
       this.usuarios = usuarios;
     });
   }
 
+  // Método llamado al hacer submit en el formulario
   async onRegister() {
+    // Verifica que el formulario sea válido y las contraseñas coincidan
     if (this.registerForm.invalid || this.registerForm.value.password !== this.registerForm.value.confirmPassword) {
       this.presentAlert('Error', 'Formulario inválido o las contraseñas no coinciden.');
-      return; // Manejo básico de errores
+      return;
     }
 
-    // Genera un nuevo ID
+    // Cálculo del nuevo ID en base al usuario con el mayor ID actual
     const nuevoId = this.usuarios.length > 0 ? Math.max(...this.usuarios.map(u => u.id)) + 1 : 1;
 
-    // Crea un nuevo usuario con el nuevo ID y el campo apellido
+    // Construcción del nuevo objeto usuario
     const nuevoUsuario: ClUsuario = {
-      id: nuevoId, // Asigna el nuevo ID
+      id: nuevoId,
       nombre: this.registerForm.value.name,
-      apellido: this.registerForm.value.apellido, // Agrega el apellido del formulario
+      apellido: this.registerForm.value.apellido,
       correo: this.registerForm.value.email,
       contrasena: this.registerForm.value.password,
       metodoPago1: '',
@@ -59,26 +61,28 @@ export class RegisterPage implements OnInit {
       metodoPago3: ''
     };
 
+    // Muestra una animación de carga mientras se procesa el registro
     const loading = await this.loadingController.create({
       message: 'Registrando...'
     });
     await loading.present();
 
+    // Envío del nuevo usuario al servicio y manejo de la respuesta
     this.userService.addUser(nuevoUsuario).subscribe({
       next: async (res) => {
         await loading.dismiss();
-        await this.presentAlert('Éxito', 'Usuario registrado con éxito.'); // Mostrar alerta de éxito
-        this.router.navigate(['/login']); // Redirigir al login
+        await this.presentAlert('Éxito', 'Usuario registrado con éxito.');
+        this.router.navigate(['/login']); // Redirige al login después del registro
       },
       error: async (err) => {
         await loading.dismiss();
-        await this.presentAlert('Error', 'Error al registrar el usuario.'); // Mostrar alerta de error
+        await this.presentAlert('Error', 'Error al registrar el usuario.');
         console.error("Error al registrar el usuario", err);
       }
     });
   }
 
-  // Método para mostrar alertas
+  // Método reutilizable para mostrar mensajes al usuario
   async presentAlert(header: string, message: string) {
     const alert = await this.alertController.create({
       header,
